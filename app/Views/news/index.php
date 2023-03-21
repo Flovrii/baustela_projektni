@@ -1,7 +1,7 @@
 <html>
   
   <head>
-    <title>Bauštela - official site</title>
+    <title>Školske novine</title>
   </head>
 
   
@@ -10,9 +10,26 @@
     <div class="container">
       <div class="vertical-center">
         <nav>
-            <a class="anim" href="index.php">Početna</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="anim" href="registracija.php">Registracija</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="anim" href="prijava.php">Prijava</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="anim" href="/">Početna</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php
+               $session = session();
+               $sessionCheck = $session->get('username');
+               if(isset($sessionCheck))
+               {
+                echo "<a class='anim' href='Auth/logout'>Logout</a>";
+              }
+              else
+              {
+                echo "<a class='anim' href='Auth/'>Prijava</a>";
+              }?>
+           <?php
+              $session = session();
+              $check = $session->get('username');
+              if(isset($check) && $check== 'admin')
+              {
+                echo "<a class='anim' href='News/create'>Kreiraj</a>";
+              }
+            ?>
         </nav>
         
       </div>
