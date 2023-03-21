@@ -26,7 +26,7 @@ class Auth extends BaseController
             $session2 = session();
             $session2->set('username', 'admin');
             //
-            return redirect()->to('News');
+            return redirect()->to('Home');
         } 
         else {
             return redirect()->to('Auth');
@@ -57,6 +57,6 @@ class Auth extends BaseController
         $session = session();
         $session->destroy();
 
-        return redirect()->to('News');
+        return redirect()->to('Home');
     }
 }

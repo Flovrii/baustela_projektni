@@ -15,7 +15,7 @@
               }
               else
               {
-                echo "<a class='anim' href='Auth/'>Prijava</a>";
+                echo "<a class='anim' href='#'>Prijava</a>";
               }?>
            <?php
               $session = session();
