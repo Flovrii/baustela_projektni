@@ -1,8 +1,40 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title>Skolsk novine</title>
 </head>
 <body>
 
-    <h1><?= esc($title) ?></h1>
+        <header class="head">
+            <img class="imghead" src="sk.jpg">
+        </header>
+</body>ž
+</html>
+
+    <style>
+
+        .head{
+        font-size: 50px;
+        font-family:  Yu Gothic UI Semibold;
+        color: white;
+        height: 10vh;
+        background-color: white;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-weight: normal;
+       
+        }
+
+        .imghead{
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 600px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+    </style>
