@@ -11,7 +11,7 @@
                $sessionCheck = $session->get('username');
                if(isset($sessionCheck))
                {
-                echo "<a class='anim' href='Auth/logout'>Logout</a>";
+                echo "<a class='anim' href='Auth/logout'>Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
               }
               else
               {
@@ -37,7 +37,7 @@
     <div class="container1">
       <div class="vertical-center1">
 
-      <h1>Login</h1>
+      <h1>Prijava</h1>
 
         <?php if (isset($validation)): ?>
             <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
@@ -45,10 +45,10 @@
 
         <?= form_open('Auth/login') ?>
         <div class="form-group">
-            <input type="text" class="text1" name="username" placeholder="username" id="username" class="form-control" value="<?= set_value('username') ?>">
+            <input type="text" class="text1" name="username" placeholder="admin" id="username" class="form-control" value="<?= set_value('username') ?>">
         </div><br>
         <div class="form-group">
-            <input type="password" class="text1" placeholder="password"  name="password" id="password" class="form-control">
+            <input type="password" class="text1" placeholder="0000"  name="password" id="password" class="form-control">
         </div><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -57,7 +57,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;
-        <button type="submit" class="button" class="btn btn-primary">Login</button>
+        <button type="submit" class="button" class="btn btn-primary">Prijavi se</button>
         <?= form_close() ?>
 
       </div>
@@ -78,7 +78,7 @@
 
 .button{
   border-radius: 5px;
-  background-color: #2596be;
+  background-color: rgb(150, 162, 176);
   padding: 12px 40px;
   color: white;
   margin-left: auto;
@@ -161,7 +161,7 @@
   font-family: Yu Gothic UI Semibold;
   color: black;
   background-color: white;
-  background-image: url("back.jpg");
+  background-image: url("../back.jpg");
   height: 95.9vh;
   margin: 0px;
 }

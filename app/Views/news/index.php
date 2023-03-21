@@ -11,7 +11,7 @@
                $sessionCheck = $session->get('username');
                if(isset($sessionCheck))
                {
-                echo "<a class='anim' href='Auth/logout'>Logout</a>";
+                echo "<a class='anim' href='Auth/logout'>Odjava</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
               }
               else
               {
@@ -49,7 +49,7 @@
 
           <?php else: ?>
 
-              <h3>Nema vijesti</h3>
+              <h3>Nema vijesti:</h3>
 
               <p>Pristup vijestim nije moguć!</p>
 
@@ -137,7 +137,7 @@
   font-family: Yu Gothic UI Semibold;
   color: black;
   background-color: white;
-  background-image: url("back.jpg");
+  background-image: url("../back.jpg");
   height: 100vh;
   margin: 0px;
 }

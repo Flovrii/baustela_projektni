@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Skolske novine</title>
+    <title>Školske novine</title>
 </head>
 <body>
 
         <header class="head">
-            <img class="imghead" src="sk.jpg">
+            <img class="imghead" src="../sk.jpg">
         </header>
 
     <style>
