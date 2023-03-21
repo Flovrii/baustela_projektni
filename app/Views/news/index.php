@@ -1,10 +1,5 @@
 <html>
   
-  <head>
-    <title>Školske novine</title>
-  </head>
-
-  
   <body>
 
     <div class="container">
@@ -25,7 +20,7 @@
            <?php
               $session = session();
               $check = $session->get('username');
-              if(isset($check) && $check== 'admin')
+              if(isset($check))
               {
                 echo "<a class='anim' href='News/create'>Kreiraj</a>";
               }
@@ -35,42 +30,48 @@
       </div>
     </div>
 
-    
-
+  
     <main>
-
     <div class="container1">
-      <div class="vertical-center1">
-        
 
-<?php if (! empty($news) && is_array($news)): ?>
+          <?php if (! empty($news) && is_array($news)): ?>
 
-    <?php foreach ($news as $news_item): ?>
+              <?php foreach ($news as $news_item): ?>
 
-        <h3><?= esc($news_item['title']) ?></h3>
+                  <h3 class="title"><?= esc($news_item['title']) ?></h3>
 
-        <div class="main">
-            <?= esc($news_item['body']) ?>
-        </div>
-        <p><a href="/news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
+                  <div class="main">
+                      <?= esc($news_item['body']) ?>
+                  </div>
+                  <hr>
 
-    <?php endforeach ?>
+              <?php endforeach ?>
 
-<?php else: ?>
+          <?php else: ?>
 
-    <h3>No News</h3>
+              <h3>Nema vijesti</h3>
 
-    <p>Unable to find any news for you.</p>
+              <p>Pristup vijestim nije moguć!</p>
 
-<?php endif ?>
-
-      </div>
+          <?php endif ?>
     </div>
       
 </main>
 
 
 <style>
+
+  .title{
+    font
+  }
+
+  .main{
+      color: gray;
+  }
+
+  h3{
+    font-size: 30px;
+  }
 
   h2{
   font-family: calibri;
@@ -102,14 +103,8 @@
   margin: 0;
   position: absolute;
   top: 140%;
-  left: 32%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.vertical-center.1 {
-  margin: 0;
+  left: 0%;
+  width: 1902px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
@@ -118,7 +113,7 @@
 .container1 {
 
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -132,7 +127,7 @@
   font-family: calibri;
   color: black;
   line-height: 5vh;
-  background-color: lightgray;
+  background-color: rgb(150, 162, 176);
 }
 
 

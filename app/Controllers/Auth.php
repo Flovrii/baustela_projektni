@@ -18,7 +18,7 @@ class Auth extends BaseController
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        if ($username == 'admin' && $password == '1234') 
+        if ($username == 'admin' && $password == '0000') 
         {
             $session = session();
             $session->set('isLoggedIn', true);
